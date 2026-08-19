@@ -1,0 +1,44 @@
+Test 1: Read address 10H
+--------------------------------
+Address      = 10H
+Operation    = READ
+Cache Hit    = 0
+Cache Miss   = 1
+Memory Read  = 1
+Memory Data  = AAH
+CPU Data     = AAH
+
+Test 2: Read address 10H again
+--------------------------------
+Address      = 10H
+Operation    = READ
+Cache Hit    = 1
+Cache Miss   = 0
+Memory Read  = 0
+CPU Data     = AAH
+
+Test 3: Read address 20H
+--------------------------------
+Address      = 20H
+Operation    = READ
+Cache Hit    = 0
+Cache Miss   = 1
+Memory Read  = 1
+Memory Data  = BBH
+CPU Data     = BBH
+
+Test 4: Write 55H to address 30H
+--------------------------------
+Address      = 30H
+Operation    = WRITE
+Write Data   = 55H
+Cache Update = YES
+Memory Write = 1
+
+Test 5: Read address 30H
+--------------------------------
+Address      = 30H
+Operation    = READ
+Cache Hit    = 1
+Cache Miss   = 0
+CPU Data     = 55H
